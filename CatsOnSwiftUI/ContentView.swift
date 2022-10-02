@@ -7,7 +7,27 @@
 
 import SwiftUI
 
+@MainActor
+class ContentViewModel: ObservableObject {
+    private let service = ConnectionManager()
+
+    func startFetching() async {
+        print(Breed.example.name)
+        do {
+            let result = try await service.fetchBreeds()
+            print("Success:\(result.count)")
+        } catch {
+            print("Error:")
+            print(error)
+        }
+    }
+}
+
+
 struct ContentView: View {
+    @StateObject private var viewModel = ContentViewModel()
+
+
     var body: some View {
         VStack {
             Image(systemName: "globe")
@@ -16,6 +36,9 @@ struct ContentView: View {
             Text("Hello, world!")
         }
         .padding()
+        .task {
+            await viewModel.startFetching()
+        }
     }
 }
 

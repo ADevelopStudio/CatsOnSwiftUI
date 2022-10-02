@@ -1,0 +1,43 @@
+//
+//  GetBreedsRequest.swift
+//  CatsOnSwiftUI
+//
+//  Created by Dmitrii Zverev on 2/10/2022.
+//
+
+import Foundation
+
+struct GetBreedsRequest: Encodable {
+    ///The size of image to return - small, med or full. small is perfect for Discord. Defaults to med
+    var size: String? = "med"
+    
+    ///Comma delimited string of the image types to return gif, jpg, orpng. Defaults to return all types jpg,gif,png.
+    var mimeTypes: String? = "jpg,gif,png"
+    
+    ///Response format json, orsrc. src will redirect straight to the image, so is useful for putting a link straight into HTML as the 'src' on an 'img' tag. Defaults to json
+    var format: String? = "json"
+    
+    ///The order to return results in. RANDOM, ASC or DESC. If either ASC or DESC is passed then the Pagination headers will be on the response allowing you to see the total amount of results, and your current page. Default is RANDOM
+    var order: String? = "RANDOM"
+    
+    ///Integer - used for Paginating through all the results. Only used when order is ASC or DESC
+    var page: Int?
+    
+    ///Integer - number of results to return. Without an API Key you can only pass 1, with a Key you can pass up to 25. Default is 1
+    var limit: Int? = 1
+    
+    ///Comma delimited string of integers, matching the id's of the Categories to filter the search. These categories can found in the /v1/categories request. e.g. category_ids=2
+    var categoryIds: String? = nil
+    
+    ///Comma delimited string of integers, matching the id's of the Breeds to filter the search. These categories can found in the /v1/breeds request
+    var breedIds: String? = nil
+    
+    ///Only return images which have breed data attached. Integer - 0 or 1. Default is 0
+    var hasBreeds: Int? = 0
+}
+
+extension GetBreedsRequest {
+    static var codeChallengeDefaults: GetBreedsRequest {
+        GetBreedsRequest(mimeTypes: "jpg", order: "ASC", limit: 10, hasBreeds: 1)
+    }
+}
