@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		622F474528E8FC270095232D /* CatsOnSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F474428E8FC270095232D /* CatsOnSwiftUIApp.swift */; };
-		622F474728E8FC270095232D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F474628E8FC270095232D /* ContentView.swift */; };
+		622F474728E8FC270095232D /* BreadsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F474628E8FC270095232D /* BreadsView.swift */; };
 		622F474928E8FC270095232D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 622F474828E8FC270095232D /* Assets.xcassets */; };
 		622F474C28E8FC270095232D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 622F474B28E8FC270095232D /* Preview Assets.xcassets */; };
 		622F475628E8FC280095232D /* CatsOnSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F475528E8FC280095232D /* CatsOnSwiftUITests.swift */; };
@@ -22,6 +22,14 @@
 		622F478028E958200095232D /* ServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F477F28E958200095232D /* ServiceError.swift */; };
 		622F478328E95C000095232D /* Bread+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478228E95C000095232D /* Bread+Mock.swift */; };
 		622F478528E963F60095232D /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478428E963F60095232D /* LoadingState.swift */; };
+		622F478928E966300095232D /* BreedListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478828E966300095232D /* BreedListCell.swift */; };
+		622F478F28E966C50095232D /* ImageRetriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478E28E966AC0095232D /* ImageRetriver.swift */; };
+		622F479028E966C50095232D /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478D28E966AC0095232D /* CachedImage.swift */; };
+		622F479128E966C50095232D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478C28E966AC0095232D /* ImageCache.swift */; };
+		622F479228E966C50095232D /* CachedImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478B28E966AC0095232D /* CachedImageManager.swift */; };
+		622F479628E969500095232D /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F479528E969500095232D /* BreedListView.swift */; };
+		622F479828E96E480095232D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F479728E96E480095232D /* ErrorView.swift */; };
+		622F479A28E970840095232D /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F479928E970840095232D /* Modifiers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +45,7 @@
 /* Begin PBXFileReference section */
 		622F474128E8FC270095232D /* CatsOnSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatsOnSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		622F474428E8FC270095232D /* CatsOnSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsOnSwiftUIApp.swift; sourceTree = "<group>"; };
-		622F474628E8FC270095232D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		622F474628E8FC270095232D /* BreadsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsView.swift; sourceTree = "<group>"; };
 		622F474828E8FC270095232D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		622F474B28E8FC270095232D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		622F475128E8FC280095232D /* CatsOnSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsOnSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +60,14 @@
 		622F477F28E958200095232D /* ServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceError.swift; sourceTree = "<group>"; };
 		622F478228E95C000095232D /* Bread+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bread+Mock.swift"; sourceTree = "<group>"; };
 		622F478428E963F60095232D /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		622F478828E966300095232D /* BreedListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListCell.swift; sourceTree = "<group>"; };
+		622F478B28E966AC0095232D /* CachedImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImageManager.swift; sourceTree = "<group>"; };
+		622F478C28E966AC0095232D /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		622F478D28E966AC0095232D /* CachedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImage.swift; sourceTree = "<group>"; };
+		622F478E28E966AC0095232D /* ImageRetriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRetriver.swift; sourceTree = "<group>"; };
+		622F479528E969500095232D /* BreedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListView.swift; sourceTree = "<group>"; };
+		622F479728E96E480095232D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		622F479928E970840095232D /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +110,10 @@
 			isa = PBXGroup;
 			children = (
 				622F474428E8FC270095232D /* CatsOnSwiftUIApp.swift */,
-				622F474628E8FC270095232D /* ContentView.swift */,
+				622F474628E8FC270095232D /* BreadsView.swift */,
+				622F479528E969500095232D /* BreedListView.swift */,
+				622F478828E966300095232D /* BreedListCell.swift */,
+				622F479728E96E480095232D /* ErrorView.swift */,
 				622F477828E9031B0095232D /* Models */,
 				622F477528E902F60095232D /* Support Files */,
 				622F476E28E8FC5B0095232D /* Networking */,
@@ -133,8 +152,10 @@
 		622F477528E902F60095232D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				622F478A28E966690095232D /* ImageCacher */,
 				622F477128E8FFB40095232D /* Extensions.swift */,
 				622F477628E902FF0095232D /* Utilites.swift */,
+				622F479928E970840095232D /* Modifiers.swift */,
 			);
 			path = "Support Files";
 			sourceTree = "<group>";
@@ -157,6 +178,17 @@
 				622F478228E95C000095232D /* Bread+Mock.swift */,
 			);
 			path = Mock;
+			sourceTree = "<group>";
+		};
+		622F478A28E966690095232D /* ImageCacher */ = {
+			isa = PBXGroup;
+			children = (
+				622F478D28E966AC0095232D /* CachedImage.swift */,
+				622F478B28E966AC0095232D /* CachedImageManager.swift */,
+				622F478C28E966AC0095232D /* ImageCache.swift */,
+				622F478E28E966AC0095232D /* ImageRetriver.swift */,
+			);
+			path = ImageCacher;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,15 +293,23 @@
 			files = (
 				622F478528E963F60095232D /* LoadingState.swift in Sources */,
 				622F478028E958200095232D /* ServiceError.swift in Sources */,
-				622F474728E8FC270095232D /* ContentView.swift in Sources */,
+				622F479828E96E480095232D /* ErrorView.swift in Sources */,
+				622F479128E966C50095232D /* ImageCache.swift in Sources */,
+				622F479A28E970840095232D /* Modifiers.swift in Sources */,
+				622F474728E8FC270095232D /* BreadsView.swift in Sources */,
 				622F477028E8FC6E0095232D /* ConnectionManager.swift in Sources */,
+				622F479628E969500095232D /* BreedListView.swift in Sources */,
+				622F478F28E966C50095232D /* ImageRetriver.swift in Sources */,
 				622F478328E95C000095232D /* Bread+Mock.swift in Sources */,
 				622F474528E8FC270095232D /* CatsOnSwiftUIApp.swift in Sources */,
 				622F477E28E957ED0095232D /* ApiPath.swift in Sources */,
 				622F477428E9010F0095232D /* GetCatsRequest.swift in Sources */,
 				622F477C28E956D10095232D /* Bread.swift in Sources */,
 				622F477728E902FF0095232D /* Utilites.swift in Sources */,
+				622F479228E966C50095232D /* CachedImageManager.swift in Sources */,
+				622F479028E966C50095232D /* CachedImage.swift in Sources */,
 				622F477228E8FFB40095232D /* Extensions.swift in Sources */,
+				622F478928E966300095232D /* BreedListCell.swift in Sources */,
 				622F477A28E9549B0095232D /* GetBreedsRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

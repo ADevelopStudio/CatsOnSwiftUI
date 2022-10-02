@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Breed: Codable {
+struct Breed: Codable, Identifiable, BreedListCellDataModel {
     let id: String
     let name: String
     let altNames: String?
