@@ -7,41 +7,38 @@
 
 import SwiftUI
 
-@MainActor
-class BreadsViewModel: ObservableObject {
-    @Published private(set) var loadingState: LoadingState = .idle
-    @Published private(set) var breeds: [Breed] = []
-
-    private let service = ConnectionManager()
-
-    func startFetching() async {
-        self.loadingState = .loading
-        do {
-            let result = try await service.fetchBreeds()
-            self.loadingState = .idle
-            self.breeds = result
-        } catch {
-            print("Error:")
-            print(error)
-            self.loadingState = .failed(error)
-        }
-    }
-}
-
-
 struct BreadsView: View {
     @StateObject private var viewModel = BreadsViewModel()
-
-
+    
+    
     var body: some View {
         NavigationView {
             switch viewModel.loadingState {
             case .idle:
-                BreedListView(breeds: viewModel.breeds)
+                ScrollView{
+                    LazyVStack{
+                        ForEach(viewModel.breeds) { breed in
+                            NavigationLink {
+                                BreedDelailsView(breed: breed)
+                            } label: {
+                                BreedListCell(breed)
+                            }
+                        }
+                        if !viewModel.isBreedListFull{
+                            ProgressView()
+                                .padding()
+                                .onAppear {
+                                    Task { await viewModel.loadNextPage() }
+                                }
+                        }
+                    }
+                }
+                .navigationTitle("Breeds")
             case .failed(let error):
-                Text(error.localizedDescription)
+                ErrorView(error: error)
             case .loading:
                 ProgressView()
+                    .scaleEffect(2)
             }
         }
         .task {

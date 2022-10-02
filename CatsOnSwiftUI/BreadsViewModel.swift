@@ -1,0 +1,48 @@
+//
+//  BreadsViewModel.swift
+//  CatsOnSwiftUI
+//
+//  Created by Dmitrii Zverev on 2/10/2022.
+//
+
+import Foundation
+
+
+@MainActor
+class BreadsViewModel: ObservableObject {
+    @Published private(set) var loadingState: LoadingState = .idle
+    @Published private(set) var breeds: [Breed] = []
+    @Published private(set) var isBreedListFull: Bool = false
+
+    private let service = ConnectionManager.shared
+    private var currentlyLoadedPage = 0
+    private var isLoadingNewPage: Bool = false
+
+    func startFetching() async {
+        self.loadingState = .loading
+        do {
+            let result = try await service.fetchBreeds(parameters: GetBreedsRequest(page: 1))
+            self.currentlyLoadedPage = 1
+            isBreedListFull = result.count < GetBreedsRequest.pageLimit
+            self.loadingState = .idle
+            self.breeds = result
+        } catch {
+            self.loadingState = .failed(error)
+        }
+    }
+
+    func loadNextPage() async {
+        if isLoadingNewPage { return }
+        do {
+            isLoadingNewPage = true
+            currentlyLoadedPage += 1
+            let result = try await service.fetchBreeds(parameters: GetBreedsRequest(page: currentlyLoadedPage))
+            isBreedListFull = result.count < GetBreedsRequest.pageLimit
+            self.breeds = self.breeds + result
+            isLoadingNewPage = false
+        } catch {
+            isBreedListFull = true
+            isLoadingNewPage = false
+        }
+    }
+}

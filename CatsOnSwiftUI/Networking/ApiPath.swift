@@ -9,7 +9,7 @@ import Foundation
 
 
 enum ApiPath {
-    case getAllBreads
+    case getAllBreads(GetBreedsRequest)
 //    case update(id: Int)
 }
 
@@ -26,8 +26,8 @@ extension ApiPath {
     
     private var queryItems: [URLQueryItem] {
         switch self {
-        case .getAllBreads:
-            return []
+        case .getAllBreads(let request):
+            return request.toQueryItems
         }
     }
     

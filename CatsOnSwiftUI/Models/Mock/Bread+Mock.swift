@@ -28,7 +28,7 @@ extension Breed {
     "life_span": "14 - 15",
     "indoor": 0,
     "lap": 1,
-    "alt_names": "",
+    "alt_names": "nice cat",
     "adaptability": 5,
     "affection_level": 5,
     "child_friendly": 3,

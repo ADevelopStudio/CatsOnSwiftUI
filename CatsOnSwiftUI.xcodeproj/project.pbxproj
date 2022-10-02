@@ -27,9 +27,11 @@
 		622F479028E966C50095232D /* CachedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478D28E966AC0095232D /* CachedImage.swift */; };
 		622F479128E966C50095232D /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478C28E966AC0095232D /* ImageCache.swift */; };
 		622F479228E966C50095232D /* CachedImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F478B28E966AC0095232D /* CachedImageManager.swift */; };
-		622F479628E969500095232D /* BreedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F479528E969500095232D /* BreedListView.swift */; };
 		622F479828E96E480095232D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F479728E96E480095232D /* ErrorView.swift */; };
 		622F479A28E970840095232D /* Modifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F479928E970840095232D /* Modifiers.swift */; };
+		622F479C28E974890095232D /* BreedDelailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F479B28E974890095232D /* BreedDelailsView.swift */; };
+		622F479E28E977D40095232D /* BreedImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F479D28E977D40095232D /* BreedImagesView.swift */; };
+		622F47A028E98A720095232D /* BreadsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F479F28E98A720095232D /* BreadsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,9 +67,11 @@
 		622F478C28E966AC0095232D /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		622F478D28E966AC0095232D /* CachedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedImage.swift; sourceTree = "<group>"; };
 		622F478E28E966AC0095232D /* ImageRetriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRetriver.swift; sourceTree = "<group>"; };
-		622F479528E969500095232D /* BreedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListView.swift; sourceTree = "<group>"; };
 		622F479728E96E480095232D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		622F479928E970840095232D /* Modifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Modifiers.swift; sourceTree = "<group>"; };
+		622F479B28E974890095232D /* BreedDelailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDelailsView.swift; sourceTree = "<group>"; };
+		622F479D28E977D40095232D /* BreedImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImagesView.swift; sourceTree = "<group>"; };
+		622F479F28E98A720095232D /* BreadsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreadsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,9 +115,11 @@
 			children = (
 				622F474428E8FC270095232D /* CatsOnSwiftUIApp.swift */,
 				622F474628E8FC270095232D /* BreadsView.swift */,
-				622F479528E969500095232D /* BreedListView.swift */,
+				622F479F28E98A720095232D /* BreadsViewModel.swift */,
 				622F478828E966300095232D /* BreedListCell.swift */,
 				622F479728E96E480095232D /* ErrorView.swift */,
+				622F479B28E974890095232D /* BreedDelailsView.swift */,
+				622F479D28E977D40095232D /* BreedImagesView.swift */,
 				622F477828E9031B0095232D /* Models */,
 				622F477528E902F60095232D /* Support Files */,
 				622F476E28E8FC5B0095232D /* Networking */,
@@ -293,18 +299,20 @@
 			files = (
 				622F478528E963F60095232D /* LoadingState.swift in Sources */,
 				622F478028E958200095232D /* ServiceError.swift in Sources */,
+				622F479C28E974890095232D /* BreedDelailsView.swift in Sources */,
 				622F479828E96E480095232D /* ErrorView.swift in Sources */,
 				622F479128E966C50095232D /* ImageCache.swift in Sources */,
 				622F479A28E970840095232D /* Modifiers.swift in Sources */,
 				622F474728E8FC270095232D /* BreadsView.swift in Sources */,
 				622F477028E8FC6E0095232D /* ConnectionManager.swift in Sources */,
-				622F479628E969500095232D /* BreedListView.swift in Sources */,
 				622F478F28E966C50095232D /* ImageRetriver.swift in Sources */,
 				622F478328E95C000095232D /* Bread+Mock.swift in Sources */,
+				622F47A028E98A720095232D /* BreadsViewModel.swift in Sources */,
 				622F474528E8FC270095232D /* CatsOnSwiftUIApp.swift in Sources */,
 				622F477E28E957ED0095232D /* ApiPath.swift in Sources */,
 				622F477428E9010F0095232D /* GetCatsRequest.swift in Sources */,
 				622F477C28E956D10095232D /* Bread.swift in Sources */,
+				622F479E28E977D40095232D /* BreedImagesView.swift in Sources */,
 				622F477728E902FF0095232D /* Utilites.swift in Sources */,
 				622F479228E966C50095232D /* CachedImageManager.swift in Sources */,
 				622F479028E966C50095232D /* CachedImage.swift in Sources */,
