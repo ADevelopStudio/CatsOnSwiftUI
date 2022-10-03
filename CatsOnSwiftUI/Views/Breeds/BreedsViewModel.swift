@@ -1,5 +1,5 @@
 //
-//  BreadsViewModel.swift
+//  BreedsViewModel.swift
 //  CatsOnSwiftUI
 //
 //  Created by Dmitrii Zverev on 2/10/2022.
@@ -9,7 +9,7 @@ import Foundation
 
 
 @MainActor
-class BreadsViewModel: ObservableObject {
+class BreedsViewModel: ObservableObject {
     @Published private(set) var loadingState: LoadingState = .idle
     @Published private(set) var breeds: [Breed] = []
     @Published private(set) var isBreedListFull: Bool = false
@@ -20,13 +20,16 @@ class BreadsViewModel: ObservableObject {
 
     func startFetching() async {
         self.loadingState = .loading
+        isLoadingNewPage = true
         do {
             let result = try await service.fetchBreeds(parameters: GetBreedsRequest(page: 1))
             self.currentlyLoadedPage = 1
             isBreedListFull = result.count < GetBreedsRequest.pageLimit
             self.loadingState = .idle
             self.breeds = result
+            isLoadingNewPage = false
         } catch {
+            isLoadingNewPage = false
             self.loadingState = .failed(error)
         }
     }

@@ -7,12 +7,15 @@
 
 import Foundation
 
-struct GetCatsRequest: Encodable {
+struct GetCatImagesRequest: Encodable {
+    static let pageLimit: Int = 25
+
+    
     ///The size of image to return - small, med or full. small is perfect for Discord. Defaults to med
     var size: String? = "med"
     
-    ///Comma delimited string of the image types to return gif, jpg, orpng. Defaults to return all types jpg,gif,png.
-    var mimeTypes: String? = "jpg,gif,png"
+    ///Comma delimited string of the image types to return gif, jpg, orpng. Defaults to return all types jpg
+    var mimeTypes: String? = "jpg"
     
     ///Response format json, orsrc. src will redirect straight to the image, so is useful for putting a link straight into HTML as the 'src' on an 'img' tag. Defaults to json
     var format: String? = "json"
@@ -30,14 +33,21 @@ struct GetCatsRequest: Encodable {
     var categoryIds: String? = nil
     
     ///Comma delimited string of integers, matching the id's of the Breeds to filter the search. These categories can found in the /v1/breeds request
-    var breedIds: String? = nil
+    var breedId: String? = nil
     
-    ///Only return images which have breed data attached. Integer - 0 or 1. Default is 0
-    var hasBreeds: Int? = 0
-}
-
-extension GetCatsRequest {
-    static var codeChallengeDefaults: GetCatsRequest {
-        GetCatsRequest(mimeTypes: "jpg", order: "ASC", limit: 10, hasBreeds: 1)
-    }
+//    ///For ther  Greed
+//    init(page: Int, breedId: String) {
+//        self.page = page
+//        self.breedId = breedId
+//        self.limit = Self.pageLimit
+//        self.order = "ASC"
+//    }
+//
+//    static func forGreed(page: Int, breedId: String) -> GetCatImagesRequest {
+//        GetCatImagesRequest(order: "ASC", page: page, limit: Self.pageLimit, breedId: breedId)
+//    }
+//    
+//    static func forSample(breedId: String) -> GetCatImagesRequest {
+//        GetCatImagesRequest(limit:5, breedId: breedId)
+//    }
 }

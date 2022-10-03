@@ -16,8 +16,8 @@ struct CachedImage: View {
     let transition: AnyTransition
     
     init(url: String?,
-         animation: Animation? = nil,
-         transition: AnyTransition = .identity) {
+         animation: Animation? = .spring(),
+         transition: AnyTransition = .opacity) {
         self.urlString = url
         self.animation = animation
         self.transition = transition
@@ -47,10 +47,8 @@ struct CachedImage: View {
                     .symbolRenderingMode(.multicolor)
                     .setIconStyle()
                     .transition(transition)
-            default:
-                Image(systemName: "xmark")
-                    .setIconStyle()
-                    .transition(transition)
+            case .none:
+                EmptyView()
             }
         }
         .animation(animation, value: manager.currentState)

@@ -7,9 +7,8 @@
 
 import SwiftUI
 
-struct BreadsView: View {
-    @StateObject private var viewModel = BreadsViewModel()
-    
+struct BreedsView: View {
+    @StateObject private var viewModel = BreedsViewModel()
     
     var body: some View {
         NavigationView {
@@ -19,7 +18,8 @@ struct BreadsView: View {
                     LazyVStack{
                         ForEach(viewModel.breeds) { breed in
                             NavigationLink {
-                                BreedDelailsView(breed: breed)
+                                OneColunGreedView(breed: breed)
+//                                BreedDelailsView(breed: breed)
                             } label: {
                                 BreedListCell(breed)
                             }
@@ -41,14 +41,15 @@ struct BreadsView: View {
                     .scaleEffect(2)
             }
         }
+        .animation(.easeInOut, value: viewModel.loadingState)
         .task {
             await viewModel.startFetching()
         }
     }
 }
 
-struct BreadsView_Previews: PreviewProvider {
+struct BreedsView_Previews: PreviewProvider {
     static var previews: some View {
-        BreadsView()
+        BreedsView()
     }
 }

@@ -12,3 +12,11 @@ enum LoadingState {
     case failed(Error)
     case idle
 }
+
+extension LoadingState: Equatable {
+    private var descr: String {
+        String(describing: self)
+    }
+
+    static func == (lhs: LoadingState, rhs: LoadingState) -> Bool { rhs.descr == lhs.descr }
+}
