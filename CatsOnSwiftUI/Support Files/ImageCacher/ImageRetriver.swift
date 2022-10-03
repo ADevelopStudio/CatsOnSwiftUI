@@ -9,7 +9,9 @@ import Foundation
 
 struct ImageRetriver {
     func fetch(_ imgUrl: URL) async throws -> Data {
-        let (data, _) = try await URLSession.shared.data(from: imgUrl)
+        var urlRequest =  URLRequest(url: imgUrl)
+        urlRequest.cachePolicy = .returnCacheDataElseLoad
+        let (data, _) = try await URLSession.shared.data(for: urlRequest)
         return data
     }
 }

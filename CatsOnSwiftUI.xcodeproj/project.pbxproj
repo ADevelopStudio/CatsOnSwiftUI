@@ -35,9 +35,10 @@
 		622F47AD28EA4E9E0095232D /* CountryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F47AC28EA4E9E0095232D /* CountryView.swift */; };
 		622F47AF28EA5DE10095232D /* BreedImages+Mock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F47AE28EA5DE10095232D /* BreedImages+Mock.swift */; };
 		622F47B328EA98DD0095232D /* FullScreenImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F47B228EA98DD0095232D /* FullScreenImageView.swift */; };
-		622F47B528EAA71E0095232D /* OneColunGreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F47B428EAA71E0095232D /* OneColunGreedView.swift */; };
+		622F47B528EAA71E0095232D /* GalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F47B428EAA71E0095232D /* GalleryView.swift */; };
 		622F47B728EAB3C60095232D /* BreedDelailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F47B628EAB3C60095232D /* BreedDelailsViewModel.swift */; };
 		622F47BC28EAC02F0095232D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F47BB28EAC02F0095232D /* ErrorView.swift */; };
+		624DD54528EADD1900C48D3B /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624DD54428EADD1900C48D3B /* GalleryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,9 +82,10 @@
 		622F47AC28EA4E9E0095232D /* CountryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryView.swift; sourceTree = "<group>"; };
 		622F47AE28EA5DE10095232D /* BreedImages+Mock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BreedImages+Mock.swift"; sourceTree = "<group>"; };
 		622F47B228EA98DD0095232D /* FullScreenImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageView.swift; sourceTree = "<group>"; };
-		622F47B428EAA71E0095232D /* OneColunGreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneColunGreedView.swift; sourceTree = "<group>"; };
+		622F47B428EAA71E0095232D /* GalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryView.swift; sourceTree = "<group>"; };
 		622F47B628EAB3C60095232D /* BreedDelailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDelailsViewModel.swift; sourceTree = "<group>"; };
 		622F47BB28EAC02F0095232D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		624DD54428EADD1900C48D3B /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,7 +212,8 @@
 			children = (
 				622F47A828EA4CFC0095232D /* CarouselView.swift */,
 				622F47B228EA98DD0095232D /* FullScreenImageView.swift */,
-				622F47B428EAA71E0095232D /* OneColunGreedView.swift */,
+				622F47B428EAA71E0095232D /* GalleryView.swift */,
+				624DD54428EADD1900C48D3B /* GalleryViewModel.swift */,
 				622F47AC28EA4E9E0095232D /* CountryView.swift */,
 				622F47BB28EAC02F0095232D /* ErrorView.swift */,
 			);
@@ -347,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				624DD54528EADD1900C48D3B /* GalleryViewModel.swift in Sources */,
 				622F478528E963F60095232D /* LoadingState.swift in Sources */,
 				622F478028E958200095232D /* ServiceError.swift in Sources */,
 				622F479C28E974890095232D /* BreedDelailsView.swift in Sources */,
@@ -372,7 +376,7 @@
 				622F479028E966C50095232D /* CachedImage.swift in Sources */,
 				622F477228E8FFB40095232D /* Extensions.swift in Sources */,
 				622F478928E966300095232D /* BreedListCell.swift in Sources */,
-				622F47B528EAA71E0095232D /* OneColunGreedView.swift in Sources */,
+				622F47B528EAA71E0095232D /* GalleryView.swift in Sources */,
 				622F47AF28EA5DE10095232D /* BreedImages+Mock.swift in Sources */,
 				622F477A28E9549B0095232D /* GetBreedsRequest.swift in Sources */,
 			);

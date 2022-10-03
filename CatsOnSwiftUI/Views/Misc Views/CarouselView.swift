@@ -12,7 +12,9 @@ struct CarouselView: View {
 
     var breed: Breed
     var images: [BreedImage]
+        
     @State private var selectedBreedImage: BreedImage?
+    
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -33,7 +35,7 @@ struct CarouselView: View {
                     GeometryReader { proxy in
                         let scale = self.getScale(proxy: proxy)
                         NavigationLink {
-                            OneColunGreedView(breed: breed)
+                            GalleryView(breed: breed)
                         } label: {
                             VStack(spacing: 20) {
                                 Text("🐈")

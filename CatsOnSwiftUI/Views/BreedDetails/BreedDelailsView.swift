@@ -15,6 +15,8 @@ struct BreedDelailsView: View {
     }
         
     var body: some View {
+//        let navKink: Destination = GalleryView(breed: viewModel.breed)
+
         ScrollView {
             VStack {
                 Group {
@@ -41,7 +43,6 @@ struct BreedDelailsView: View {
                     
                     Text(viewModel.breed.description)
                         .font(.body)
-                    
                     switch viewModel.loadingState {
                     case .failed:
                         EmptyView()
@@ -52,6 +53,12 @@ struct BreedDelailsView: View {
                             Text("Photos:")
                                 .asSectionHeader()
                             CarouselView(breed: viewModel.breed, images: viewModel.images)
+                            NavigationLink {
+                                GalleryView(breed: viewModel.breed)
+                            } label: {
+                                Text("MORE?")
+                            }
+
                         }
                     case .loading:
                         ProgressView()

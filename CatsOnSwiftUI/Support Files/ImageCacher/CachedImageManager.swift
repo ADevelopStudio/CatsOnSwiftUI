@@ -19,17 +19,18 @@ final class CachedImageManager: ObservableObject {
             self.currentState = .failed(error: ServiceError.invalidUrl)
             return
         }
-        self.currentState = .loading
         
         if let imageData = cache.object(forkey: imgStringUrl as NSString) {
+            print("imgStringUrl ALREADY")
             self.currentState = .success(data: imageData)
             return
         }
-        
+        print("imgStringUrl LOADING")
+        self.currentState = .loading
         do {
             let data = try await imageRetriver.fetch(imgUrl)
-            self.currentState = .success(data: data)
             cache.set(object: data as NSData, forKey: imgStringUrl as NSString)
+            self.currentState = .success(data: data)
         } catch {
             self.currentState = .failed(error: error)
         }

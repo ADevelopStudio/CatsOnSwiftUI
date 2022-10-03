@@ -18,8 +18,8 @@ struct BreedsView: View {
                     LazyVStack{
                         ForEach(viewModel.breeds) { breed in
                             NavigationLink {
-                                OneColunGreedView(breed: breed)
-//                                BreedDelailsView(breed: breed)
+//                                GalleryView(breed: breed)
+                                BreedDelailsView(breed: breed)
                             } label: {
                                 BreedListCell(breed)
                             }
