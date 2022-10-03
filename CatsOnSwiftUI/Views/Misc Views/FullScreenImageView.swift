@@ -51,10 +51,7 @@ struct FullScreenImageView: View {
             Button {
                 selectedBreedImage = nil
             } label: {
-                Image(systemName: "xmark.circle")
-                    .font(.system(size: 30, weight: .light))
-                    .foregroundColor(.accentColor)
-                    .padding()
+                CloseModalButtonView()
             }
         }
     }

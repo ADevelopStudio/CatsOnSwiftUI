@@ -16,6 +16,7 @@ struct ErrorView: View {
                 .setIconStyle()
             Text(error.localizedDescription)
                 .font(.title)
+                .foregroundColor(.secondary)
         }
         .padding()
     }

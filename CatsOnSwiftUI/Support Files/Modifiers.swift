@@ -13,7 +13,7 @@ private struct IconImage: ViewModifier {
         content
             .imageScale(.large)
             .aspectRatio(contentMode: .fill)
-            .foregroundColor(.red)
+            .foregroundColor(.secondary)
             .frame(width: size, height: size)
     }
 }

@@ -40,6 +40,7 @@
 		622F47BC28EAC02F0095232D /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F47BB28EAC02F0095232D /* ErrorView.swift */; };
 		624DD54528EADD1900C48D3B /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624DD54428EADD1900C48D3B /* GalleryViewModel.swift */; };
 		624DD54728EB154800C48D3B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 624DD54628EB154800C48D3B /* Localizable.strings */; };
+		624DD54928EB97EB00C48D3B /* CloseModalButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624DD54828EB97EB00C48D3B /* CloseModalButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		622F47BB28EAC02F0095232D /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		624DD54428EADD1900C48D3B /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		624DD54628EB154800C48D3B /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		624DD54828EB97EB00C48D3B /* CloseModalButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseModalButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				624DD54428EADD1900C48D3B /* GalleryViewModel.swift */,
 				622F47AC28EA4E9E0095232D /* CountryView.swift */,
 				622F47BB28EAC02F0095232D /* ErrorView.swift */,
+				624DD54828EB97EB00C48D3B /* CloseModalButtonView.swift */,
 			);
 			path = "Misc Views";
 			sourceTree = "<group>";
@@ -359,6 +362,7 @@
 				622F478028E958200095232D /* ServiceError.swift in Sources */,
 				622F479C28E974890095232D /* BreedDelailsView.swift in Sources */,
 				622F479128E966C50095232D /* ImageCache.swift in Sources */,
+				624DD54928EB97EB00C48D3B /* CloseModalButtonView.swift in Sources */,
 				622F47BC28EAC02F0095232D /* ErrorView.swift in Sources */,
 				622F479A28E970840095232D /* Modifiers.swift in Sources */,
 				622F47B728EAB3C60095232D /* BreedDelailsViewModel.swift in Sources */,

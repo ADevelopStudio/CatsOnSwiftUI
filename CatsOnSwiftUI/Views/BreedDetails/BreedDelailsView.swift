@@ -51,13 +51,6 @@ struct BreedDelailsView: View {
                             Text("\(BreedDelailsViewStrings.sectionPhotos.localised):")
                                 .asSectionHeader()
                             CarouselView(breed: viewModel.breed, images: viewModel.images)
-                            
-                            NavigationLink {
-                                GalleryView(breed: viewModel.breed)
-                            } label: {
-                                Text("MORE?")
-                            }
-
                         }
                     case .loading:
                         ProgressView()

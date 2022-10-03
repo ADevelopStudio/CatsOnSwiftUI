@@ -13,7 +13,8 @@ struct CarouselView: View {
     var images: [BreedImage]
     
     @State private var selectedBreedImage: BreedImage?
-    
+    @State private var isShowingFullGallery: Bool = false
+
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 20) {
@@ -29,28 +30,30 @@ struct CarouselView: View {
                     }
                     .frame(width: cardSize.width + 20, height: cardSize.height + 30)
                 }
-                if !images.isEmpty {
-                    GeometryReader { proxy in
-                        let scale = self.getScale(proxy: proxy)
-                        NavigationLink {
-                            GalleryView(breed: breed)
-                        } label: {
-                            VStack(spacing: 20) {
-                                Text("🐈")
-                                    .font(.largeTitle)
-                                Text("\(CarouselViewStrings.morePhotos.localised) \(Image(systemName: "chevron.right"))")
-                                    .font(.callout)
-                            }
-                            .asCarouselCard(cardSize: cardSize, scale: scale)
+                
+                GeometryReader { proxy in
+                    let scale = self.getScale(proxy: proxy)
+                        VStack(spacing: 20) {
+                            Text("🐈")
+                                .font(.largeTitle)
+                            Text("\(CarouselViewStrings.morePhotos.localised) \(Image(systemName: "chevron.right"))")
+                                .font(.headline)
+                                .foregroundColor(.accentColor)
                         }
-                    }
-                    .frame(width: cardSize.width + 20, height: cardSize.height + 30)
+                        .asCarouselCard(cardSize: cardSize, scale: scale)
+                        .onTapGesture {
+                            isShowingFullGallery = true
+                        }
                 }
+                .frame(width: cardSize.width + 20, height: cardSize.height + 30)
             }
             .padding(32)
         }
         .fullScreenCover(item: $selectedBreedImage) { _ in
             FullScreenImageView(selectedBreedImage: $selectedBreedImage)
+        }
+        .fullScreenCover(isPresented: $isShowingFullGallery) {
+            GalleryView(isShowingModal: $isShowingFullGallery, viewModel: GalleryViewModel(breed: self.breed))
         }
     }
     
