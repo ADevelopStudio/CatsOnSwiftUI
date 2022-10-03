@@ -15,11 +15,18 @@ enum ServiceError: Error, LocalizedError {
     var errorDescription: String? {
         switch self {
         case .invalidStatus:
-            return "Nothing found"
+            return ServiceErrorStrings.invalidStatus.localised
         case .generalFailure:
-            return "Something went wrong"
+            return ServiceErrorStrings.generalFailure.localised
         case .invalidUrl:
-            return "Invalid Url"
+            return ServiceErrorStrings.invalidUrl.localised
         }
     }
+}
+
+
+enum ServiceErrorStrings: String, CaseIterable {
+    case invalidStatus = "ServiceError_invalid_status" //"Nothing found"
+    case generalFailure = "ServiceError_general_failure" //"Something went wrong"
+    case invalidUrl = "ServiceError_invalid_url" //"Invalid Url"
 }

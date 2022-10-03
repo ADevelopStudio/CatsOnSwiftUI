@@ -21,11 +21,9 @@ final class CachedImageManager: ObservableObject {
         }
         
         if let imageData = cache.object(forkey: imgStringUrl as NSString) {
-            print("imgStringUrl ALREADY")
             self.currentState = .success(data: imageData)
             return
         }
-        print("imgStringUrl LOADING")
         self.currentState = .loading
         do {
             let data = try await imageRetriver.fetch(imgUrl)

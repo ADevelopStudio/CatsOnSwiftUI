@@ -34,20 +34,4 @@ struct GetCatImagesRequest: Encodable {
     
     ///Comma delimited string of integers, matching the id's of the Breeds to filter the search. These categories can found in the /v1/breeds request
     var breedId: String? = nil
-    
-//    ///For ther  Greed
-//    init(page: Int, breedId: String) {
-//        self.page = page
-//        self.breedId = breedId
-//        self.limit = Self.pageLimit
-//        self.order = "ASC"
-//    }
-//
-//    static func forGreed(page: Int, breedId: String) -> GetCatImagesRequest {
-//        GetCatImagesRequest(order: "ASC", page: page, limit: Self.pageLimit, breedId: breedId)
-//    }
-//    
-//    static func forSample(breedId: String) -> GetCatImagesRequest {
-//        GetCatImagesRequest(limit:5, breedId: breedId)
-//    }
 }

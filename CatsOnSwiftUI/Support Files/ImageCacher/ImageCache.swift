@@ -12,12 +12,9 @@ class ImageCache {
     
     static let shared = ImageCache()
     
-    private init() {
-        print("CACHE start")
-    }
+    private init() {}
     
     private lazy var cache: CacheType = {
-        print("CACHE init")
         let cache = CacheType()
         cache.countLimit = 100
         cache.totalCostLimit = 50 * 1024 * 1024 // 52428800 Bytes > 50MB

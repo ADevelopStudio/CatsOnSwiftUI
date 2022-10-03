@@ -13,11 +13,15 @@ class BreedsViewModel: ObservableObject {
     @Published private(set) var loadingState: LoadingState = .idle
     @Published private(set) var breeds: [Breed] = []
     @Published private(set) var isBreedListFull: Bool = false
-
-    private let service = ConnectionManager.shared
+    
     private var currentlyLoadedPage = 0
     private var isLoadingNewPage: Bool = false
-
+    private let service: NetworkService
+    
+    init(service: NetworkService = ConnectionManager.shared) {
+        self.service = service
+    }
+    
     func startFetching() async {
         self.loadingState = .loading
         isLoadingNewPage = true
@@ -33,7 +37,7 @@ class BreedsViewModel: ObservableObject {
             self.loadingState = .failed(error)
         }
     }
-
+    
     func loadNextPage() async {
         if isLoadingNewPage { return }
         do {

@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  CatsOnSwiftUI
+
+  Created by Dmitrii Zverev on 3/10/2022.
+*/
+
+"BreedsView_Title" = "Cat Breeds";
+
+"CarouselView_more_photos" = "More photos";
+
+"BreedDelailsView_photos" = "Photos";
+"BreedDelailsView_stat" = "Stat";
+"BreedDelailsView_links" = "Links";
+
+"BreedStrings_adaptability" = "Adaptability";
+"BreedStrings_affection_level" = "Affection level";
+"BreedStrings_child_friendly" = "Child friendly";
+"BreedStrings_dog_friendly" = "Dog friendly";
+"BreedStrings_energy_level" = "Energy level";
+"BreedStrings_grooming" = "Grooming";
+"BreedStrings_health_issues" = "Health issues";
+"BreedStrings_intelligence" = "iIntelligence";
+"BreedStrings_shedding_level" = "Shedding level";
+"BreedStrings_social_needs" = "Social needs";
+"BreedStrings_stranger_friendly" = "Stranger friendly";
+"BreedStrings_vocalisation" = "Vocalisation";
+
+"BreedStrings_weight_metric" = "kg";
+"BreedStrings_weight_imperial" = "lb";
+
+"ServiceError_invalid_status" = "Nothing found";
+"ServiceError_general_failure" = "Something went wrong";
+"ServiceError_invalid_url" = "Invalid Url";

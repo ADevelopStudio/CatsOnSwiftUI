@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ErrorView: View {
     var error: Error
-
+    
     var body: some View {
         VStack {
             Image(systemName: "xmark.icloud")

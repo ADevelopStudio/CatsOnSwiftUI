@@ -17,11 +17,11 @@ class GalleryViewModel: ObservableObject {
     @Published private(set) var isBreedListFull: Bool = false
     private var currentlyLoadedPage = 0
     private var isLoadingNewPage: Bool = false
+    private let service: NetworkService
     
-    private let service = ConnectionManager.shared
-    
-    init(breed: Breed) {
+    init(breed: Breed, service: NetworkService = ConnectionManager.shared) {
         self.breed = breed
+        self.service = service
     }
     
     

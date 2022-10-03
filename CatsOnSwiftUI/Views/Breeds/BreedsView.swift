@@ -18,7 +18,6 @@ struct BreedsView: View {
                     LazyVStack{
                         ForEach(viewModel.breeds) { breed in
                             NavigationLink {
-//                                GalleryView(breed: breed)
                                 BreedDelailsView(breed: breed)
                             } label: {
                                 BreedListCell(breed)
@@ -33,7 +32,7 @@ struct BreedsView: View {
                         }
                     }
                 }
-                .navigationTitle("Breeds")
+                .navigationTitle(BreedsViewStrings.title.localised)
             case .failed(let error):
                 ErrorView(error: error)
             case .loading:
@@ -52,4 +51,8 @@ struct BreedsView_Previews: PreviewProvider {
     static var previews: some View {
         BreedsView()
     }
+}
+
+enum BreedsViewStrings: String, CaseIterable {
+    case title = "BreedsView_Title" //"Cat Breeds"
 }

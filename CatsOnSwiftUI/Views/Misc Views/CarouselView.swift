@@ -9,12 +9,10 @@ import SwiftUI
 
 struct CarouselView: View {
     private let cardSize = CGSize(width: Utilites.screenWidth/1.5, height:  Utilites.screenWidth/2)
-
     var breed: Breed
     var images: [BreedImage]
-        
-    @State private var selectedBreedImage: BreedImage?
     
+    @State private var selectedBreedImage: BreedImage?
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
@@ -40,7 +38,7 @@ struct CarouselView: View {
                             VStack(spacing: 20) {
                                 Text("🐈")
                                     .font(.largeTitle)
-                                Text("More photos \(Image(systemName: "chevron.right"))")
+                                Text("\(CarouselViewStrings.morePhotos.localised) \(Image(systemName: "chevron.right"))")
                                     .font(.callout)
                             }
                             .asCarouselCard(cardSize: cardSize, scale: scale)
@@ -72,4 +70,8 @@ struct CarouselView_Previews: PreviewProvider {
             CarouselView(breed: .example, images: BreedImage.examples)
         }
     }
+}
+
+enum CarouselViewStrings: String, CaseIterable {
+    case morePhotos = "CarouselView_more_photos" //"More photos"
 }

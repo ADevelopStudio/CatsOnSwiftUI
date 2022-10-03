@@ -9,15 +9,15 @@ import Foundation
 
 @MainActor
 class BreedDelailsViewModel: ObservableObject {
-    private(set) var breed: Breed
-    
     @Published private(set) var loadingState: LoadingState = .loading
     @Published private(set) var images: [BreedImage] = []
     
-    private let service = ConnectionManager.shared
+    private(set) var breed: Breed
+    private let service: NetworkService
     
-    init(breed: Breed) {
+    init(breed: Breed, service: NetworkService = ConnectionManager.shared) {
         self.breed = breed
+        self.service = service
     }
     
     func fetchImages() async {

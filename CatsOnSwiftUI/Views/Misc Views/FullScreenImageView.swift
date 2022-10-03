@@ -18,20 +18,22 @@ struct FullScreenImageView: View {
         let dragGesture = DragGesture()
             .onChanged { value in viewState = value.translation}
             .onEnded { _ in
-                withAnimation { viewState = .zero }
+                withAnimation {
+                    viewState = .zero
+                }
             }
         let pitchToZoom = MagnificationGesture()
-            .onChanged { val in
-                let delta = val / self.lastScaleValue
-                self.lastScaleValue = val
+            .onChanged { value in
+                let delta = value / self.lastScaleValue
+                self.lastScaleValue = value
                 var newScale = self.scale * delta
                 if newScale < 1.0 { newScale = 1.0 }
                 scale = newScale
-            }.onEnded{val in
+            }.onEnded{ _ in
                 lastScaleValue = 1
             }
         let combined = dragGesture.exclusively(before: pitchToZoom)
-
+        
         ZStack {
             Color(uiColor: UIColor.systemBackground)
             CachedImage(url: selectedBreedImage?.url)

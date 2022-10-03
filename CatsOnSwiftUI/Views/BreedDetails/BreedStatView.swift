@@ -20,6 +20,7 @@ struct BreedStatView: View {
             Text(dataModel.title)
                 .font(.callout)
                 .bold()
+            
             Spacer()
             
             HStack(spacing: 2) {

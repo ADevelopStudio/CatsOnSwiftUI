@@ -51,22 +51,22 @@ struct Breed: Codable, Identifiable, BreedListCellDataModel {
 
 extension Breed {
     var imageUrl: String? { image?.url }
-    var weightDescr: String { "\(self.weight.metric)kg (\(self.weight.imperial)lb)" }
+    var weightDescr: String { "\(self.weight.metric)\(BreedStrings.weightMetric.localised)  (\(self.weight.imperial)\(BreedStrings.weightImperial.localised))" }
     
     var statData: [BreedStatData] {
         [
-            BreedStatData(title: "adaptability", value: adaptability),
-            BreedStatData(title: "affectionLevel", value: affectionLevel),
-            BreedStatData(title: "childFriendly", value: childFriendly),
-            BreedStatData(title: "dogFriendly", value: dogFriendly),
-            BreedStatData(title: "energyLevel", value: energyLevel),
-            BreedStatData(title: "grooming", value: grooming),
-            BreedStatData(title: "healthIssues", value: healthIssues),
-            BreedStatData(title: "intelligence", value: intelligence),
-            BreedStatData(title: "sheddingLevel", value: sheddingLevel),
-            BreedStatData(title: "socialNeeds", value: socialNeeds),
-            BreedStatData(title: "strangerFriendly", value: strangerFriendly),
-            BreedStatData(title: "vocalisation", value: vocalisation)
+            BreedStatData(title: BreedStrings.adaptability.localised, value: adaptability),
+            BreedStatData(title: BreedStrings.affectionLevel.localised, value: affectionLevel),
+            BreedStatData(title: BreedStrings.childFriendly.localised, value: childFriendly),
+            BreedStatData(title: BreedStrings.dogFriendly.localised, value: dogFriendly),
+            BreedStatData(title: BreedStrings.energyLevel.localised, value: energyLevel),
+            BreedStatData(title: BreedStrings.grooming.localised, value: grooming),
+            BreedStatData(title: BreedStrings.healthIssues.localised, value: healthIssues),
+            BreedStatData(title: BreedStrings.intelligence.localised, value: intelligence),
+            BreedStatData(title: BreedStrings.sheddingLevel.localised, value: sheddingLevel),
+            BreedStatData(title: BreedStrings.socialNeeds.localised, value: socialNeeds),
+            BreedStatData(title: BreedStrings.strangerFriendly.localised, value: strangerFriendly),
+            BreedStatData(title: BreedStrings.vocalisation.localised, value: vocalisation)
         ]
     }
     
@@ -106,3 +106,22 @@ struct BreedStatLink: Hashable {
         self.url = url
     }
 }
+
+enum BreedStrings: String, CaseIterable {
+    case adaptability = "BreedStrings_adaptability" //"adaptability"
+    case affectionLevel = "BreedStrings_affection_level" //"affectionLevel"
+    case childFriendly = "BreedStrings_child_friendly" //"childFriendly"
+    case dogFriendly = "BreedStrings_dog_friendly" //"dogFriendly"
+    case energyLevel = "BreedStrings_energy_level" //"energyLevel"
+    case grooming = "BreedStrings_grooming" //"grooming"
+    case healthIssues = "BreedStrings_health_issues" //"healthIssues"
+    case intelligence = "BreedStrings_intelligence" //"intelligence"
+    case sheddingLevel = "BreedStrings_shedding_level" //"sheddingLevel"
+    case socialNeeds = "BreedStrings_social_needs" //"socialNeeds"
+    case strangerFriendly = "BreedStrings_stranger_friendly" //"strangerFriendly"
+    case vocalisation = "BreedStrings_vocalisation" //"vocalisation"
+    
+    case weightMetric = "BreedStrings_weight_metric" //"kg"
+    case weightImperial = "BreedStrings_weight_imperial" //"lb"
+}
+

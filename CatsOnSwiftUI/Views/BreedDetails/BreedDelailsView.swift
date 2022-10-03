@@ -15,8 +15,6 @@ struct BreedDelailsView: View {
     }
         
     var body: some View {
-//        let navKink: Destination = GalleryView(breed: viewModel.breed)
-
         ScrollView {
             VStack {
                 Group {
@@ -50,9 +48,10 @@ struct BreedDelailsView: View {
                         if viewModel.images.isEmpty {
                             EmptyView()
                         } else {
-                            Text("Photos:")
+                            Text("\(BreedDelailsViewStrings.sectionPhotos.localised):")
                                 .asSectionHeader()
                             CarouselView(breed: viewModel.breed, images: viewModel.images)
+                            
                             NavigationLink {
                                 GalleryView(breed: viewModel.breed)
                             } label: {
@@ -64,14 +63,14 @@ struct BreedDelailsView: View {
                         ProgressView()
                     }
                     
-                    Text("Stat:")
+                    Text("\(BreedDelailsViewStrings.sectionStat.localised):")
                         .asSectionHeader()
                     ForEach(viewModel.breed.statData, id: \.self) {
                         BreedStatView(dataModel: $0)
                     }
                     
                     if !viewModel.breed.links.isEmpty {
-                        Text("Links:")
+                        Text("\(BreedDelailsViewStrings.sectionLinks.localised):")
                             .asSectionHeader()
                     }
                     ForEach(viewModel.breed.links, id: \.self) {
@@ -95,4 +94,11 @@ struct BreedDelailsView_Previews: PreviewProvider {
     static var previews: some View {
         BreedDelailsView(breed: .example)
     }
+}
+
+
+enum BreedDelailsViewStrings: String, CaseIterable {
+    case sectionPhotos = "BreedDelailsView_photos" //"Photos"
+    case sectionStat = "BreedDelailsView_stat" //"Stat"
+    case sectionLinks = "BreedDelailsView_links" //"Links"
 }
