@@ -53,7 +53,7 @@ struct CarouselView: View {
             FullScreenImageView(selectedBreedImage: $selectedBreedImage)
         }
         .fullScreenCover(isPresented: $isShowingFullGallery) {
-            GalleryView(isShowingModal: $isShowingFullGallery, viewModel: GalleryViewModel(breed: self.breed))
+            GalleryView(isShowingModal: $isShowingFullGallery, viewModel: GalleryViewModelImpl(breed: self.breed))
         }
     }
     

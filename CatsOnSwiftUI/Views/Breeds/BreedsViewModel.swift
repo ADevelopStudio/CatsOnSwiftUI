@@ -7,9 +7,17 @@
 
 import Foundation
 
+protocol BreedsViewModel: AnyObject, ObservableObject{
+    var breeds: [Breed] { get }
+    var loadingState: LoadingState { get }
+    var isBreedListFull: Bool { get }
+    func loadNextPage() async
+    func startFetching() async
+    init(service: NetworkService)
+}
 
-@MainActor
-class BreedsViewModel: ObservableObject {
+    
+class BreedsViewModelImpl: BreedsViewModel{
     @Published private(set) var loadingState: LoadingState = .idle
     @Published private(set) var breeds: [Breed] = []
     @Published private(set) var isBreedListFull: Bool = false
@@ -18,10 +26,11 @@ class BreedsViewModel: ObservableObject {
     private var isLoadingNewPage: Bool = false
     private let service: NetworkService
     
-    init(service: NetworkService = ConnectionManager.shared) {
+    required init(service: NetworkService = ConnectionManager.shared) {
         self.service = service
     }
     
+    @MainActor
     func startFetching() async {
         self.loadingState = .loading
         isLoadingNewPage = true
@@ -38,6 +47,7 @@ class BreedsViewModel: ObservableObject {
         }
     }
     
+    @MainActor
     func loadNextPage() async {
         if isLoadingNewPage { return }
         do {

@@ -18,7 +18,7 @@ struct BreedListCell: View {
     var body: some View {
         ZStack {
             Group {
-                CachedImage(url: element.imageUrl, transition: .opacity.combined(with: .scale(scale: 0.6)))
+                CachedImage(url: element.imageUrl, transition: .opacity.combined(with: .scale(scale: 0.9)))
                 LinearGradient(colors: [.clear, .black.opacity(0.6)],
                                startPoint: .center,
                                endPoint: .bottom)

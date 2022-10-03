@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  CatsOnSwiftUI
+
+  Created by Dmitrii Zverev on 3/10/2022.
+*/
+
+"BreedsView_Title" = "Razas de gatos";
+
+"CarouselView_more_photos" = "Más fotos";
+
+"BreedDelailsView_photos" = "Fotos";
+"BreedDelailsView_stat" = "Detail";
+"BreedDelailsView_links" = "Enlaces";
+
+"BreedStrings_adaptability" = "Adaptabilidad";
+"BreedStrings_affection_level" = "Nivel de afecto";
+"BreedStrings_child_friendly" = "Niño amigable";
+"BreedStrings_dog_friendly" = "Se admiten perros";
+"BreedStrings_energy_level" = "Nivel de energía";
+"BreedStrings_grooming" = "Aseo";
+"BreedStrings_health_issues" = "Problemas de salud";
+"BreedStrings_intelligence" = "Inteligencia";
+"BreedStrings_shedding_level" = "Nivel de desprendimiento";
+"BreedStrings_social_needs" = "Sociabilidad";
+"BreedStrings_stranger_friendly" = "Amigable con los extraños";
+"BreedStrings_vocalisation" = "Vocalización";
+
+"BreedStrings_weight_metric" = "kg";
+"BreedStrings_weight_imperial" = "lb";
+
+"ServiceError_invalid_status" = "Nada Encontrado";
+"ServiceError_general_failure" = "Algo salió mal";
+"ServiceError_invalid_url" = "URL invalida";

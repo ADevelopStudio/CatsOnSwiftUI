@@ -7,8 +7,12 @@
 
 import SwiftUI
 
-struct BreedsView: View {
-    @StateObject private var viewModel = BreedsViewModel()
+struct BreedsView<T>: View where T: BreedsViewModel {
+    @ObservedObject private var viewModel:T
+    
+    init(viewModel: T = BreedsViewModelImpl()) {
+        self.viewModel = viewModel
+    }
     
     var body: some View {
         NavigationView {
@@ -18,7 +22,7 @@ struct BreedsView: View {
                     LazyVStack{
                         ForEach(viewModel.breeds) { breed in
                             NavigationLink {
-                                BreedDelailsView(breed: breed)
+                                BreedDelailsView(viewModel: BreedDelailsViewModelImpl(breed: breed))
                             } label: {
                                 BreedListCell(breed)
                             }

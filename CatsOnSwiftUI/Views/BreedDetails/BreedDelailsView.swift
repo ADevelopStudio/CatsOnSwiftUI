@@ -7,11 +7,11 @@
 
 import SwiftUI
 
-struct BreedDelailsView: View {
-    @ObservedObject var viewModel: BreedDelailsViewModel
-
-    init(breed: Breed) {
-        self.viewModel = BreedDelailsViewModel(breed: breed)
+struct BreedDelailsView<T>: View where T: BreedDelailsViewModel {
+    @ObservedObject private var viewModel:T
+    
+    init(viewModel: T) {
+        self.viewModel = viewModel
     }
         
     var body: some View {
@@ -85,7 +85,7 @@ struct BreedDelailsView: View {
 
 struct BreedDelailsView_Previews: PreviewProvider {
     static var previews: some View {
-        BreedDelailsView(breed: .example)
+        BreedDelailsView(viewModel: BreedDelailsViewModelImpl(breed: .example))
     }
 }
 

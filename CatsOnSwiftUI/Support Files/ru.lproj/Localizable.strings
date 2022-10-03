@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  CatsOnSwiftUI
+
+  Created by Dmitrii Zverev on 3/10/2022.
+*/
+
+"BreedsView_Title" = "Породы кошек";
+
+"CarouselView_more_photos" = "Еще фото";
+
+"BreedDelailsView_photos" = "Фото";
+"BreedDelailsView_stat" = "Детали";
+"BreedDelailsView_links" = "Ссылки";
+
+"BreedStrings_adaptability" = "Адаптивность";
+"BreedStrings_affection_level" = "Уровень привязанности";
+"BreedStrings_child_friendly" = "Подходит для детей";
+"BreedStrings_dog_friendly" = "Подходит для собак";
+"BreedStrings_energy_level" = "Энергичность";
+"BreedStrings_grooming" = "Уход";
+"BreedStrings_health_issues" = "Здоровье";
+"BreedStrings_intelligence" = "Интеллект";
+"BreedStrings_shedding_level" = "Линька";
+"BreedStrings_social_needs" = "Oбщительность";
+"BreedStrings_stranger_friendly" = "Дружелюбный к незнакомцам";
+"BreedStrings_vocalisation" = "Вокализация";
+
+"BreedStrings_weight_metric" = "кг";
+"BreedStrings_weight_imperial" = "фт";
+
+"ServiceError_invalid_status" = "Ничего не найдено";
+"ServiceError_general_failure" = "Что-то пошло не так";
+"ServiceError_invalid_url" = "Неверный URL";

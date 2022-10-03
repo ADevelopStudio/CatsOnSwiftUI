@@ -120,7 +120,6 @@ enum BreedStrings: String, CaseIterable {
     case socialNeeds = "BreedStrings_social_needs" //"socialNeeds"
     case strangerFriendly = "BreedStrings_stranger_friendly" //"strangerFriendly"
     case vocalisation = "BreedStrings_vocalisation" //"vocalisation"
-    
     case weightMetric = "BreedStrings_weight_metric" //"kg"
     case weightImperial = "BreedStrings_weight_imperial" //"lb"
 }

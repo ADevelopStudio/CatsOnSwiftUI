@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-struct GalleryView: View {
+struct GalleryView<T>: View where T: GalleryViewModel {
     @Binding var isShowingModal: Bool
-    @ObservedObject var viewModel: GalleryViewModel
+    @ObservedObject var viewModel: T
     @State private var selectedBreedImage: BreedImage?
     
     var body: some View {
@@ -67,6 +67,6 @@ struct GalleryView: View {
 
 struct OneColunGreedView_Previews: PreviewProvider {
     static var previews: some View {
-        GalleryView(isShowingModal: .constant(false), viewModel: GalleryViewModel(breed: .example))
+        GalleryView(isShowingModal: .constant(false), viewModel: GalleryViewModelImpl(breed: .example))
     }
 }
