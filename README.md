@@ -1,5 +1,5 @@
 # CatsOnSwiftUI
-##Application requirements
+## Application requirements
 The application should use the The Cat API to display pictures and information about a user selected cat breed
 At a minimum the app should contain the following:
 * An interface to allow the user to select their desired cat breed
