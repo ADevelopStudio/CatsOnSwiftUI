@@ -1,5 +1,5 @@
 //
-//  BreadStatView.swift
+//  BreedStatView.swift
 //  CatsOnSwiftUI
 //
 //  Created by Dmitrii Zverev on 2/10/2022.
@@ -36,11 +36,11 @@ struct BreedStatView: View {
 
 struct BreedStatView_Previews: PreviewProvider {
     static var previews: some View {
-        BreedStatView(dataModel: TestBreadStatDataModel())
+        BreedStatView(dataModel: TestBreedStatDataModel())
     }
 }
 
-private struct TestBreadStatDataModel : BreedStatDataModel {
+private struct TestBreedStatDataModel : BreedStatDataModel {
     var title: String = "Some Value"
     var value: Int = 3
 }

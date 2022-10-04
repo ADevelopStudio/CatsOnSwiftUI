@@ -32,7 +32,7 @@ class ConnectionManager {
 
 extension ConnectionManager: NetworkService {
     func fetchBreeds(parameters: GetBreedsRequest) async throws -> [Breed] {
-        try await self.fetch(apiPath: .getAllBreads(parameters))
+        try await self.fetch(apiPath: .getAllBreeds(parameters))
     }
     func fetchImages(parameters: GetCatImagesRequest) async throws -> [BreedImage] {
         try await self.fetch(apiPath: .getAllCatImages(parameters))

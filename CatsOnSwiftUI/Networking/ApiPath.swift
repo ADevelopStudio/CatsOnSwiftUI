@@ -9,9 +9,8 @@ import Foundation
 
 
 enum ApiPath {
-    case getAllBreads(GetBreedsRequest)
+    case getAllBreeds(GetBreedsRequest)
     case getAllCatImages(GetCatImagesRequest)
-//    case update(id: Int)
 }
 
 
@@ -20,7 +19,7 @@ extension ApiPath {
     
     private var path: String {
         switch self {
-        case .getAllBreads:
+        case .getAllBreeds:
             return "/breeds"
         case .getAllCatImages:
             return "/images/search"
@@ -29,7 +28,7 @@ extension ApiPath {
     
     private var queryItems: [URLQueryItem] {
         switch self {
-        case .getAllBreads(let request):
+        case .getAllBreeds(let request):
             return request.toQueryItems
         case .getAllCatImages(let request):
             return request.toQueryItems
