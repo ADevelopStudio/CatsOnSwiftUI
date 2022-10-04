@@ -18,6 +18,16 @@ final class CatsOnSwiftUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
+    // MARK: - Testing Flags
+    
+    func testFlags() {
+        XCTAssertTrue(Utilites.getFlag(from: "AU") == "🇦🇺")
+        XCTAssertTrue(Utilites.getFlag(from: "US") == "🇺🇸")
+        XCTAssertTrue(Utilites.getFlag(from: "GB") == "🇬🇧")
+        XCTAssertTrue(Utilites.getFlag(from: Breed.example.countryCode) == "🇪🇬")
+    }
+    
+    
     // MARK: - Testing Mocks
 
     func testMocks() throws {
