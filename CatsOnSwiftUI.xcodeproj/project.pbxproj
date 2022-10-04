@@ -13,7 +13,6 @@
 		622F474C28E8FC270095232D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 622F474B28E8FC270095232D /* Preview Assets.xcassets */; };
 		622F475628E8FC280095232D /* CatsOnSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F475528E8FC280095232D /* CatsOnSwiftUITests.swift */; };
 		622F477028E8FC6E0095232D /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F476F28E8FC6E0095232D /* ConnectionManager.swift */; };
-		622F477228E8FFB40095232D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F477128E8FFB40095232D /* Extensions.swift */; };
 		622F477428E9010F0095232D /* GetCatImagesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F477328E9010F0095232D /* GetCatImagesRequest.swift */; };
 		622F477728E902FF0095232D /* Utilites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F477628E902FF0095232D /* Utilites.swift */; };
 		622F477A28E9549B0095232D /* GetBreedsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622F477928E9549B0095232D /* GetBreedsRequest.swift */; };
@@ -42,6 +41,7 @@
 		624DD54928EB97EB00C48D3B /* CloseModalButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624DD54828EB97EB00C48D3B /* CloseModalButtonView.swift */; };
 		624DD54A28EBA59400C48D3B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 624DD54C28EBA59400C48D3B /* Localizable.strings */; };
 		624DD55028EBAAF800C48D3B /* FailingNetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624DD54F28EBAAF800C48D3B /* FailingNetworkService.swift */; };
+		624DD55228EBC59F00C48D3B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 624DD55128EBC59F00C48D3B /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,7 +63,6 @@
 		622F475128E8FC280095232D /* CatsOnSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatsOnSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		622F475528E8FC280095232D /* CatsOnSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatsOnSwiftUITests.swift; sourceTree = "<group>"; };
 		622F476F28E8FC6E0095232D /* ConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
-		622F477128E8FFB40095232D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		622F477328E9010F0095232D /* GetCatImagesRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCatImagesRequest.swift; sourceTree = "<group>"; };
 		622F477628E902FF0095232D /* Utilites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilites.swift; sourceTree = "<group>"; };
 		622F477928E9549B0095232D /* GetBreedsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBreedsRequest.swift; sourceTree = "<group>"; };
@@ -94,6 +93,7 @@
 		624DD54D28EBA5A900C48D3B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		624DD54E28EBA61400C48D3B /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		624DD54F28EBAAF800C48D3B /* FailingNetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailingNetworkService.swift; sourceTree = "<group>"; };
+		624DD55128EBC59F00C48D3B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				622F478A28E966690095232D /* ImageCacher */,
-				622F477128E8FFB40095232D /* Extensions.swift */,
 				622F477628E902FF0095232D /* Utilites.swift */,
+				624DD55128EBC59F00C48D3B /* Extensions.swift */,
 				622F479928E970840095232D /* Modifiers.swift */,
 				624DD54C28EBA59400C48D3B /* Localizable.strings */,
 			);
@@ -383,13 +383,13 @@
 				622F474528E8FC270095232D /* CatsOnSwiftUIApp.swift in Sources */,
 				622F477E28E957ED0095232D /* ApiPath.swift in Sources */,
 				622F477428E9010F0095232D /* GetCatImagesRequest.swift in Sources */,
+				624DD55228EBC59F00C48D3B /* Extensions.swift in Sources */,
 				622F477C28E956D10095232D /* Bread.swift in Sources */,
 				622F47A228E990B40095232D /* BreedStatView.swift in Sources */,
 				622F477728E902FF0095232D /* Utilites.swift in Sources */,
 				622F479228E966C50095232D /* CachedImageManager.swift in Sources */,
 				622F47AD28EA4E9E0095232D /* CountryView.swift in Sources */,
 				622F479028E966C50095232D /* CachedImage.swift in Sources */,
-				622F477228E8FFB40095232D /* Extensions.swift in Sources */,
 				622F478928E966300095232D /* BreedListCell.swift in Sources */,
 				622F47B528EAA71E0095232D /* GalleryView.swift in Sources */,
 				622F47AF28EA5DE10095232D /* BreedImages+Mock.swift in Sources */,
