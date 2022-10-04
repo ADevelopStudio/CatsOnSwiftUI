@@ -43,6 +43,7 @@ class BreedsViewModelImpl: BreedsViewModel{
             isLoadingNewPage = false
         } catch {
             isLoadingNewPage = false
+            isBreedListFull = true
             self.loadingState = .failed(error)
         }
     }
