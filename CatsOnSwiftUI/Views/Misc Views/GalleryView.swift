@@ -41,7 +41,6 @@ struct GalleryView<T>: View where T: GalleryViewModel {
                                 }
                             }
                         }
-                        .navigationTitle(viewModel.breed.name)
                         .fullScreenCover(item: $selectedBreedImage) { _ in
                             FullScreenImageView(selectedBreedImage: $selectedBreedImage)
                         }
@@ -49,6 +48,7 @@ struct GalleryView<T>: View where T: GalleryViewModel {
                         ProgressView()
                     }
                 }
+                .navigationTitle(viewModel.breed.name)
             }
             .animation(.easeInOut, value: viewModel.loadingState)
             .toolbar{
